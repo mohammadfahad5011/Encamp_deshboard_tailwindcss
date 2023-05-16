@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
+
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        themeColor: "#34CC9C",
+                        textColor: "#747681",
+                        black: '#000000',
+                        dark: '#04091E',
+                        darkLight: '#718096',
+                        yellow: '#FCCC04',
+                    },
+                    maxWidth: {
+                        'full': '100%',
+                    },
+                    backgroundColor: {
+                        'dark': '#0D1F39;',
+                        'light': '#F8F8F8;',
+                    },
+                    container: {
+                        padding: {
+                            DEFAULT: '.8rem',
+                            xl: '25px',
+                            '2xl': '3rem',
+                        },
+                    },
+                },
+            },
+        };
+
+    </script>
+
+    <style type="text/tailwindcss">
+
+        @layer base{
+            body{ 
+                font-family: 'Circular Std', sans-serif;
+            } 
+        } 
+
+    </style>
+
+
+    <title>Encamp - Dashboard</title>
+
+</head>
+
+<body class="min-h-screen bg-light">
+
+
+
+    <!--======== Main Area Start =========-->
+    <main class="main flex items-start">
+
+        <!--======== Sidebar Area Start =========-->
+        <aside id="sidebar"
+            class="sidebar shrink-0 border-right-light border bg-white top-0 overflow-y-auto xl:overflow-visible  left-[-100%] xl:z-10 z-50  h-full min-h-screen fixed xl:sticky flex flex-col justify-between pl-[12px] xl:pl-[13px] lg:pt-[13px] pt-2 p-[13px] rounded-none  2xl:w-[280px] sm:w-[230px] w-[260px] transition-all  shrink-0">
+            <div>
+                <div class="flex items-center justify-between pb-10">
+                    <div class="sidebar-logo px-2 2xl:px-5 py-2">
+                        <a href="index.html"><img src="assets/img/logos/logo.svg" alt=""></a>
+                    </div>
+                    <div id="sidebarClose"
+                        class="sidebar-toggle transition hover:bg-themeColor text-xs -mr-3 relative right-[-1px] hover:text-white text-dark cursor-pointer bg-light h-10 w-5 flex items-center justify-center rounded-tl-xl rounded-bl-xl">
+                        <i class="far fa-chevron-left"></i>
+                    </div>
+                </div>
+                <nav class="sidebar-nav pt-4 lg:pt-6 xl:pt-2 px-1">
+                    <h6 class="text-textColor mb-5 leading-none font-medium text-xs 2xl:pl-[14px] pl-[5px]">OVERVIEW
+                    </h6>
+                    <ul class=" pb-3 mb-7">
+                        <li class=" relative mb-5"><a href="index.html"
+                                class="flex items-center 2xl:text-base text-sm font-medium text-[#3F435C]  relative pr-4 2xl:pl-[14px] pl-[5px] hover:text-themeColor transition ">
+                                <span class="w-7 shrink-0 mr-2 relative top-[-1px]"><img
+                                        src="assets/img/icons/n-icon-1.1.svg" alt=""></span>
+                                Dashboard</a></li>
+                        <li class=" relative mb-5"><a href="user.html"
+                                class="flex items-center 2xl:text-base text-sm  font-medium text-[#3F435C]  relative pr-4 2xl:pl-[14px] pl-[5px] hover:text-themeColor transition "><span
+                                    class="w-7 shrink-0 mr-2 relative top-[-1px]"><img
+                                        src="assets/img/icons/n-icon-2.svg" alt=""></span>
+                                User </a> <span
+                                class="nav-link-badge top-[8%] leading-none h-5 w-5 text-[10px] text-center flex items-center justify-center font-semibold  absolute right-0 text-white rounded-full   bg-[#3F435C]">2</span>
+                        </li>
+                        <li class=" relative mb-5"><a href="All Itineraries.html"
+                                class="flex items-center 2xl:text-base text-sm  font-medium text-[#3F435C]  relative pr-4 2xl:pl-[14px] pl-[5px] hover:text-themeColor transition "><span
+                                    class="w-7 shrink-0 mr-2 relative top-[-1px]"><img
+                                        src="assets/img/icons/n-icon-3.svg" alt=""></span>
+                                Itineraries </a>
+                        </li>
+                        <li class=" relative mb-5"><a href="All Accommodation.html"
+                                class="flex items-center font-medium  2xl:text-base text-sm text-[#3F435C]   relative pr-4 2xl:pl-[14px] pl-[5px] hover:text-themeColor transition "><span
+                                    class="w-7 shrink-0 mr-2 relative top-[-1px]"><img
+                                        src="assets/img/icons/n-icon-4.svg" alt=""></span>
+                                Accommodation </a> <span
+                                class="nav-link-badge top-[8%] leading-none h-5 w-5 text-[10px] text-center flex items-center justify-center font-semibold  absolute right-0 text-white rounded-full   bg-[#3F435C]">2</span>
+                        </li>
+                        <li class=" relative mb-5"><a href="all-activities.html"
+                                class="flex items-center font-medium text-[#3F435C]  2xl:text-base text-sm relative pr-4 2xl:pl-[14px] pl-[5px] hover:text-themeColor transition "><span
+                                    class="w-7 shrink-0 mr-2 relative top-[-1px]"><img
+                                        src="assets/img/icons/n-icon-5.svg" alt=""></span>
+                                Activities </a>
+                        </li>
+                        <li class=" relative mb-5"><a href="#"
+                                class="flex items-center font-medium  2xl:text-base text-sm  text-[#3F435C]  relative pr-4 2xl:pl-[14px] pl-[5px] hover:text-themeColor transition ">
+                                <span class="w-7 shrink-0 mr-2 relative top-[-1px]"><img
+                                        src="assets/img/icons/n-icon-6.svg" alt=""></span>
+                                Events</a></li>
+                        <li class=" relative mb-5"><a href="all-location.html"
+                                class="flex items-center font-medium  2xl:text-base text-sm  text-[#3F435C]  relative pr-4 2xl:pl-[14px] pl-[5px] hover:text-themeColor transition "><span
+                                    class="w-7 shrink-0 mr-2 relative top-[-1px]"><img
+                                        src="assets/img/icons/n-icon-7.svg" alt=""></span>
+                                Location </a> <span
+                                class="nav-link-badge top-[28%] leading-none h-2 w-2  absolute right-0  rounded-full   bg-themeColor">
+                            </span>
+                        </li>
+                        <li class=" relative mb-5"><a href="all-vehicles.html"
+                                class="flex items-center font-medium  2xl:text-base text-sm  text-themeColor  relative pr-4 2xl:pl-[14px] pl-[5px] hover:text-themeColor transition "><span
+                                    class="w-7 shrink-0 mr-2 relative top-[-1px]"><img
+                                        src="assets/img/icons/n-icon-8.1.svg" alt=""></span>
+                                Vehicles </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="sidebar-footer pt-3">
+                <div
+                    class="add-box text-center border border-dashed min-h-[120px] border-[#CDD6D7] rounded-xl p-4 flex flex-col items-center justify-center space-y-2 bg-light mb-3">
+                    <div class="plus-icon cursor-pointer">
+                        <img src="assets/img/icons/plus-icon(1).svg" alt="">
+                    </div>
+                    <h5 class="text-center text-sm font-medium text-textColor">Add New </h5>
+                </div>
+                <div class="settings-button">
+                    <a href=""
+                        class="flex items-center font-medium  xl:text-base text-sm  pl-[40px] text-[#3F435C]  relative  py-3 px-4 h-14 rounded-lg bg-light hover:text-themeColor transition"><span
+                            class="w-7 shrink-0 mr-2 relative top-[-1px]"><img src="assets/img/icons/cog.svg"
+                                alt=""></span> Settings</a>
+                </div>
+            </div>
+        </aside>
+        <!--======== Sidebar Area End =========-->
+
+
+
+        <!--======== Main Wrapper Area Start =========-->
+        <section class="main-wrapper w-full">
+
+
+            <!--======== Header Area Start =========-->
+            <header
+                class="header bg-white sm:py-4 lg:py-5 py-4 sticky top-0 left-0 w-full z-40 shadow-sm xl:shadow-none">
+                <div class="container max-w-full flex items-center justify-between">
+                    <div class="lg:flex hidden flex-col items-center justify-between">
+                        <div class="flex flex-col space-y-[8px] w-[120px]  lg:w-[200px] 2xl:w-[228px]">
+                            <h3 class="text-xl font-bold text-dark leading-none">Hi,Arun Pattnaik</h3>
+                            <span class="text-sm text-textColor block leading-none ">Let’s check your Encamp
+                                today</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-logo block lg:hidden ">
+                        <a href=""><img src="assets/img/logos/logo.svg" alt=""></a>
+                    </div>
+                    <form action="#"
+                        class="hidden lg:flex  items-center relative w-[120px]  lg:w-[320px] 2xl:w-[412px]">
+                        <input type="text"
+                            class="w-full h-12 bg-light outline-none border-0 rounded-md text-textColor text-sm px-3 pl-12 "
+                            placeholder="Search...">
+                        <span class="absolute left-3 top-3 zi-10"><img src="assets/img/icons/search-icon(1).svg"
+                                alt=""></span>
+                        <span class="absolute right-3 top-3 zi-10"><img src="assets/img/icons/search-command.svg"
+                                alt=""></span>
+                    </form>
+                    <div class="header-right flex items-center space-x-3 sm:space-x-4 lg:space-x-5 2xl:space-x-7">
+                        <div class="header-buttons flex items-center space-x-[6px] sm:space-x-2">
+                            <button id="modalOpen"
+                                class=" bordered-box flex lg:hidden items-center justify-center cursor-pointer w-[34px] h-[34px]"><img
+                                    src="assets/img/icons/search-dark.svg" alt=""></button>
+                            <button
+                                class=" btn-icon flex items-center justify-center cursor-pointer relative w-[34px] h-[34px]"><img
+                                    src="assets/img/icons/mail(1).svg" alt="">
+                                <span class="absolute  border-2 border-white rounded-full w-3 h-3 top-1 right-0"
+                                    style="background: linear-gradient(95.49deg, #FCAD02 -36.87%, #FF0041 98.63%);"></span></button>
+                            <button
+                                class=" btn-icon flex items-center justify-center cursor-pointer relative w-[34px] h-[34px]"><img
+                                    src="assets/img/icons/bell.svg" alt=""> <span
+                                    class="absolute  border-2 border-white rounded-full w-3 h-3 top-1 right-1"
+                                    style="background: linear-gradient(95.49deg, #FCAD02 -36.87%, #FF0041 98.63%);"></span></button>
+                        </div>
+                        <div class="header-profile flex items-center 2xl:space-x-4 space-x-3">
+                            <img src="assets/img/profile-image.png"
+                                class="shrink-0 sm:w-12 sm:h-12 h-9 w-9 rounded-full object-cover" alt="">
+                            <div class=" flex-col space-y-[6px]   max-w-[158px] hidden lg:flex">
+                                <h6 class="2xl:text-base text-sm font-bold text-dark leading-none ">Arun Pattnaik</h6>
+                                <span class="text-xs text-textColor block leading-none ">Admin</span>
+                            </div>
+                        </div>
+                        <div id="sidebarOpen"
+                            class="sidebar-open block xl:hidden text-dark text-lg transition  hover:text-themeColor cursor-pointer">
+                            <i class="far fa-align-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--======== Header Area End =========-->
+
+
+            <!--======== Dahsboard Area Start =========-->
+            <section class="dashboard-area w-full pt-2 lg:pt-0">
+                <div class="container max-w-full px-0 flex flex-col lg:flex-row">
+
+                    <div class="bg-white p-4 w-full lg:w-[290px] xl:w-[350px] shrink-0">
+                        <div
+                            class="rounded-md relative  flex items-center justify-start cursor-pointer space-x-4 transition mb-1 group bg-white hover:bg-light px-4 py-5">
+                            <div
+                                class="w-12 h-12 flex items-center bg-light rounded-full shrink-0 justify-center group-hover:bg-white">
+                                <img src="assets/img/icons/car-sideview.svg" alt="">
+                            </div>
+                            <a href="vehicle-details.html" class="absolute top-0 left-0 w-full h-full m-0"></a>
+                            <div>
+                                <h6 class="font-bold mb-1 text-sm leading-none">Vehicle Details </h6>
+                                <p class="text-textColor text-xs">Est arcu pharetra proin pellentesque</p>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-md relative flex items-center justify-start cursor-pointer space-x-4 transition mb-1 bg-white hover:bg-light group px-4 py-5">
+                            <div
+                                class="w-12 h-12 flex items-center bg-light group-hover:bg-white rounded-full shrink-0 justify-center">
+                                <img src="assets/img/icons/ei-8.svg" alt="">
+                            </div>
+                            <a href="vehicle-ownership-details.html"
+                                class="absolute top-0 left-0 w-full h-full m-0"></a>
+                            <div>
+                                <h6 class="font-bold mb-1 text-sm leading-none">Ownership Details</h6>
+                                <p class="text-textColor text-xs">Est arcu pharetra proin pellentesque</p>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-md relative flex items-center justify-start cursor-pointer space-x-4 transition mb-1 bg-white hover:bg-light group px-4 py-5">
+                            <div
+                                class="w-12 h-12 flex items-center bg-light group-hover:bg-white rounded-full shrink-0 justify-center">
+                                <img src="assets/img/icons/ei-2.svg" alt="">
+                            </div>
+                            <a href="vehicle-photos.html" class="absolute top-0 left-0 w-full h-full m-0"></a>
+                            <div>
+                                <h6 class="font-bold mb-1 text-sm leading-none">Photo</h6>
+                                <p class="text-textColor text-xs">Est arcu pharetra proin pellentesque</p>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-md relative flex items-center justify-start cursor-pointer space-x-4 transition mb-1 bg-light hover:bg-light group px-4 py-5">
+                            <div
+                                class="w-12 h-12 flex items-center bg-white group-hover:bg-white rounded-full shrink-0 justify-center">
+                                <img src="assets/img/icons/ei-3.svg" alt="">
+                            </div>
+                            <a href="vehicle-cost.html" class="absolute top-0 left-0 w-full h-full m-0"></a>
+                            <div>
+                                <h6 class="font-bold mb-1 text-sm leading-none">Cost</h6>
+                                <p class="text-textColor text-xs">Est arcu pharetra proin pellentesque</p>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-md relative flex items-center justify-start cursor-pointer space-x-4 transition mb-1 bg-white hover:bg-light group px-4 py-5">
+                            <div
+                                class="w-12 h-12 flex items-center bg-light group-hover:bg-white rounded-full shrink-0 justify-center">
+                                <img src="assets/img/icons/ei-4.svg" alt="">
+                            </div>
+                            <a href="vehicle-information.html" class="absolute top-0 left-0 w-full h-full m-0"></a>
+                            <div>
+                                <h6 class="font-bold mb-1 text-sm leading-none">Required Information</h6>
+                                <p class="text-textColor text-xs">Est arcu pharetra proin pellentesque</p>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-md relative flex items-center justify-start cursor-pointer space-x-4 transition mb-1 bg-white hover:bg-light group px-4 py-5">
+                            <div
+                                class="w-12 h-12 flex items-center bg-light group-hover:bg-white rounded-full shrink-0 justify-center">
+                                <img src="assets/img/icons/ei-9.svg" alt="">
+                            </div>
+                            <a href="vehicle-details-2.html" class="absolute top-0 left-0 w-full h-full m-0"></a>
+                            <div>
+                                <h6 class="font-bold mb-1 text-sm leading-none">Vehicles details </h6>
+                                <p class="text-textColor text-xs">Est arcu pharetra proin pellentesque</p>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-md relative flex items-center justify-start cursor-pointer space-x-4 transition mb-1 bg-white hover:bg-light group px-4 py-5">
+                            <div
+                                class="w-12 h-12 flex items-center bg-light group-hover:bg-white rounded-full shrink-0 justify-center">
+                                <img src="assets/img/icons/ei-6.svg" alt="">
+                            </div>
+                            <a href="#" class="absolute top-0 left-0 w-full h-full m-0"></a>
+                            <div>
+                                <h6 class="font-bold mb-1 text-sm leading-none">FAQ’s</h6>
+                                <p class="text-textColor text-xs">Est arcu pharetra proin pellentesque</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light px-4 lg:px-6 xl:px-7 w-full py-5 lg:py-7">
+                        <div class="bg-white  rounded-[8px]  mb-5 col-span-3 lg:col-span-2 ">
+                            <div class="p-5 pt-3 lg:p-8 min-h-[75vh]">
+                                <div class="flex flex-wrap items-center">
+                                    <h5 class="text-lg text-dark font-bold lg:text-xl">
+                                        Cost
+                                    </h5>
+                                    <div class="single-input w-28 relative">
+                                        <div class="input-icon absolute right-0 bottom-[15px]"><img
+                                                src="assets/img/icons/ic_sort-green.svg" alt=""></div>
+                                        <select id=""
+                                            class="appearance-none bg-white border border-[#DCDCDC] outline-none rounded-sm h-9 py-1 px-3 ml-3 text-sm font-medium text-dark w-full  ">
+                                            <option selected="">Per Day</option>
+                                            <option value="US">Option 1</option>
+                                            <option value="US">Option 2</option>
+                                            <option value="US">Option 3</option>
+                                            <option value="US">Option 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr class="mt-4 mb-6 h-[1px]">
+                                <form action="">
+                                    <div class="flex flex-col lg:flex-row gap-3 items-end">
+                                        <div class="single-input mb-3 w-full lg:w-[40%] relative">
+                                            <label for="" class="block text-[#718096] mb-3 leading-none">Cost to
+                                                company</label>
+                                            <div class="input-icon absolute left-3 bottom-[16px]"><img
+                                                    src="assets/img/icons/rupay.svg" alt=""></div>
+                                            <div class="input-icon absolute right-3 bottom-[18px]"><img
+                                                    src="assets/img/icons/chevron-down.svg" alt=""></div>
+                                            <select id=""
+                                                class="appearance-none bg-white border border-[#DCDCDC] outline-none rounded-lg h-14 py-3 px-4 xl:pl-10 pl-10 xl:px-5 text-base font-medium text-[#04091E99] w-full  xl:h-14">
+                                                <option selected="">45,960</option>
+                                                <option value="US">Option 1</option>
+                                                <option value="US">Option 2</option>
+                                                <option value="US">Option 3</option>
+                                                <option value="US">Option 4</option>
+                                            </select>
+                                        </div>
+                                        <div class="single-input mb-3 w-full lg:w-[40%] relative">
+                                            <label for="" class="block text-[#718096] mb-3 leading-none">Listed
+                                                price</label>
+                                            <div class="input-icon absolute left-3 bottom-[16px]"><img
+                                                    src="assets/img/icons/rupay.svg" alt=""></div>
+                                            <div class="input-icon absolute right-3 bottom-[18px]"><img
+                                                    src="assets/img/icons/chevron-down.svg" alt=""></div>
+                                            <select id=""
+                                                class="appearance-none bg-white border border-[#DCDCDC] outline-none rounded-lg h-14 py-3 px-4 xl:pl-10 pl-10 xl:px-5 text-base font-medium text-[#04091E99] w-full  xl:h-14">
+                                                <option selected="">45,960</option>
+                                                <option value="US">Option 1</option>
+                                                <option value="US">Option 2</option>
+                                                <option value="US">Option 3</option>
+                                                <option value="US">Option 4</option>
+                                            </select>
+                                        </div>
+                                        <div class="single-input mb-3 w-full lg:w-[20%]">
+                                            <input type="text"
+                                                class="form-input bg-white border border-[#DCDCDC] outline-none rounded-lg h-12 py-3 px-4 xl:px-5 text-base font-medium text-dark placeholder:text-[#04091E99] w-full h-14  "
+                                                placeholder="23%  margin">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div
+                                class="form-footer flex justify-between items-center shadow-[0_-9px_20px_-17px_rgba(0,0,0,0.3)] bg-white px-5 py-4 lg:px-7 lg:py-5">
+                                <a href="all-vehicles.html"
+                                    class="inline-block py-4 text-sm font-bold px-4  text-center rounded-[8px] text-themeColor border border-themeColor leading-none bg-white border-themeColor transition hover:bg-themeColor hover:text-white ">
+                                    Cancel</a>
+                                <a href="vehicle-information.html"
+                                    class="inline-block py-4 min-w-[110px] text-sm font-bold px-4  text-center rounded-[8px] text-white leading-none bg-themeColor transition hover:bg-dark">
+                                    Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--======== Dahsboard Area End =========-->
+
+
+        </section>
+        <!--======== Main Wrapper Area End =========-->
+
+
+
+
+
+    </main>
+    <!--======== Main Area End =========-->
+
+
+    <!-- Search Box -->
+    <div id="searchModal"
+        class="search-box opacity-0 invisible fixed transition top-0 left-0 w-full h-full flex items-center justify-center p-3 z-40 bg-[#0D1F3978]">
+        <div class="search-box-wrap shadow-sm bg-white rounded-lg p-4  w-full max-w-[400px]">
+            <form action="#" class=" ">
+                <div class="flex items-center relative w-full ">
+                    <input type="text"
+                        class="w-full h-12 bg-light border border-slate-200 outline-none   rounded-md text-textColor text-sm px-3   "
+                        placeholder="Search...">
+                    <span class="absolute right-3 top-3 zi-10"><img src="assets/img/icons/search-command.svg"
+                            alt=""></span>
+                </div>
+                <div class="text-center">
+                    <button id="modalClose"
+                        class="inline-block py-3.5 mt-3   text-sm  px-6   rounded-[6px] text-white leading-none bg-themeColor transition hover:bg-dark">
+                        Search
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+
+        // Sidebar Activation
+
+        document.getElementById("sidebarOpen").addEventListener("click", function () {
+            document.getElementById("sidebar").classList.add("show");
+        });
+
+        document.getElementById("sidebarClose").addEventListener("click", function () {
+            document.getElementById("sidebar").classList.remove("show");
+        });
+
+
+        // Search Modal Activation
+
+        document.getElementById("modalOpen").addEventListener("click", function () {
+            document.getElementById("searchModal").classList.add("show");
+        });
+
+        document.getElementById("modalClose").addEventListener("click", function () {
+            document.getElementById("searchModal").classList.remove("show");
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>

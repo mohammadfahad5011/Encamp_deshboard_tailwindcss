@@ -1,0 +1,32 @@
+/* Radio CSS */
+
+.checkbox:checked+.check-icon {
+    display: flex;
+}
+
+.sidebar.show{
+    left: 0;
+}
+
+input[type=range]::-webkit-slider-thumb{
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    background: #34CC9C;
+    border-radius: 50%;
+}
+
+#searchModal.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+@media screen and (max-width: 767px){
+    .drag-dot {
+        margin-bottom: 0;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
